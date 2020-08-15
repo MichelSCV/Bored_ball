@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.188235, 1 )
+colors = PoolColorArray( 0.632813, 0.00494385, 0.00494385, 1, 0.898438, 0.889609, 0.849304, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 10
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 277.988, 7.31172 )
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2( 90, 0 )
+collision_layer = 8
+collision_mask = 6
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 45.9077, 1 )
+rotation = -1.5708
+scale = Vector2( 1, 449.255 )
+texture = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 3 )
